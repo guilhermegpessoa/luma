@@ -1,5 +1,7 @@
 # Luma – Front-End Coding Challenge
 
+**Live preview:** https://luma-psi-seven.vercel.app
+
 A responsive landing page for **Luma**, an online learning platform, built from the supplied Figma design (desktop and mobile) for the Buzzvel Front-End Engineer challenge.
 
 **Stack:** Next.js 15 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS v4
