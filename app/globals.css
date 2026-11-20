@@ -1,0 +1,164 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /* Figma tokens */
+  --color-blue: #3157f6; /* primary-blue */
+  --color-blue-light: #e2e8ff; /* primary-blue-light */
+  --color-ink: #171b2c; /* text-primary */
+  --color-ink-2: #656770; /* text-secondary */
+  --color-ink-3: #6d7384; /* text-tertiary */
+  --color-line: #dbdfeb; /* line-1 */
+  --color-sun: #ffee7e; /* secondary-yellow */
+  --color-sun-dark: #e9d659;
+  --color-cream: #f9f8f3; /* background-light-yellow */
+  --color-butter: #fff1c2; /* background-yellow */
+  --color-night: #171b2c; /* background-darkblue */
+  --color-on-dark-2: #e7e7ec; /* text-white-secondary */
+  --color-on-dark-3: #9e9faa; /* text-white-tertiary */
+
+  /* not in the Figma token list (decorative icons) */
+  --color-peach: #ffc9a3;
+  --color-coral: #ff6a45;
+}
+
+/* ---- Typography (mobile-first; desktop values from 1024px) ---- */
+@utility type-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: -1px;
+  @media (min-width: 64rem) {
+    font-size: 64px;
+    line-height: 70px;
+    letter-spacing: -1.6px;
+  }
+}
+@utility type-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.8px;
+  @media (min-width: 64rem) {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.2px;
+  }
+}
+@utility type-h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.8px;
+  @media (min-width: 64rem) {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.2px;
+  }
+}
+@utility type-h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  @media (min-width: 64rem) {
+    line-height: 32px;
+  }
+}
+@utility type-lead {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  @media (min-width: 64rem) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@utility type-body-lg {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+@utility type-sm {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+@utility type-btn {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+@utility type-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+@utility type-quote {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0;
+  @media (min-width: 64rem) {
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: -0.75px;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
